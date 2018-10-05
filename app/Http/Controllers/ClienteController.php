@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\ClienteRequest;
 
 class ClienteController extends Controller
 {
@@ -32,9 +33,9 @@ class ClienteController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store( ClienteRequest $request)
     {
-        dd($request->all());
+        return response()->json(['data'=>'ok']);       
     }
 
     /**
